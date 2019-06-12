@@ -24,7 +24,7 @@
     <string name="good_fellow_toast">What a good fellow, you did not succumb to the temptation.</string>
     <string name="separator">&#160;And your answer is&#160;</string>
 
-    <string name="api_level_text" translatable="false">API Level %d</string>
+    <!-- <string name="api_level_text" translatable="false">API Level %d</string> -->
 
     <string name="leftover_cheats_count_text">%d prompts left.</string>
     <string name="end_toast">"The end. %d answers are correct, %d are incorrect. Percentage of correct answers is %.2f per cent. Number of peeped answers is %d."</string>

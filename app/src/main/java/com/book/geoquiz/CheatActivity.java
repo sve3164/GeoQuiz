@@ -25,7 +25,7 @@ public class CheatActivity extends AppCompatActivity {
 
     private TextView mAnswerTextView;
     private Button mShowAnswerButton;
-    private TextView mApiLevelTextView;
+    //private TextView mApiLevelTextView;
 
     private boolean mAnswerWasShown = false;
 
@@ -67,11 +67,11 @@ public class CheatActivity extends AppCompatActivity {
             });
         }
 
-        mApiLevelTextView = findViewById(R.id.api_level_text_view);
+        /*mApiLevelTextView = findViewById(R.id.api_level_text_view);
         int apiLevel = Build.VERSION.SDK_INT;
         String apiLevelText = String.format(getResources().getString(R.string.api_level_text),
                 apiLevel);
-        mApiLevelTextView.setText(apiLevelText);
+        mApiLevelTextView.setText(apiLevelText);*/
     }
 
     private void setAnswerShownResult(boolean isAnswerShown) {
