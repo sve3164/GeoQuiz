@@ -1,43 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
     tools:context=".CheatActivity">
 
     <TextView
+        android:id="@+id/warning_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/answer_text_view"
         android:padding="24dp"
+        android:gravity="center"
+        android:fontFamily="@font/montserrat"
+        android:textAlignment="center"
+        android:textSize="18sp"
         android:text="@string/warning_text" />
 
     <TextView
         android:id="@+id/answer_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/warning_text_view"
+        app:layout_constraintBottom_toTopOf="@+id/show_answer_button"
         android:padding="24dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
         tools:text="Answer"/>
 
     <Button
         android:id="@+id/show_answer_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answer_text_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="8dp"
+        style="@style/MyBorderlessColoredButton"
+        android:theme="@style/AccentButton"
         android:text="@string/show_answer_button" />
 
-    <!-- <TextView
-        android:id="@+id/api_level_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="monospace"
-        android:padding="24dp"
-        android:shadowColor="@color/colorShadow"
-        android:shadowDx="30.0"
-        android:shadowDy="10.0"
-        android:shadowRadius="60.0"
-        android:textColor="@color/colorApiLevel"
-        android:textSize="24sp"
-        android:textStyle="bold|italic"
-        tools:text="API level" /> -->
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
